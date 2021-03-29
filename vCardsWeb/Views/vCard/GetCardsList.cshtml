@@ -1,0 +1,16 @@
+﻿@model IEnumerable<vCardContainer>
+@{
+    ViewData["Title"] = "Список контактов";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>GetCardsList</h1>
+
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.vCard_name -- @item.vCard_PrefNumber</li>
+        }
+    </ul>
+</div>
